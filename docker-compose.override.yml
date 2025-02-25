@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  pruebagtmotivedb:
+    container_name: PruebaGtMotivedb
+    environment:
+      SA_PASSWORD: "PruebaGtMotivedb"
+      ACCEPT_EULA: "Y"
+    ports:
+      - 1433:1433
+    restart: always
+    volumes:
+      - ./.containers/database:/var/opt/mssql/data
+
+  pruebagtmotiveapi:
+    container_name: PruebaGtMotiveapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Test
+      - ASPNETCORE_URLS=http://+:5000
+      - "ConnectionStrings__Database=Server=PruebaGtMotivedb;Database=PruebaGtMotivedb;User Id=sa;Password=PruebaGtMotivedb;TrustServerCertificate=True;MultipleActiveResultSets=true"
+    depends_on:
+      - pruebagtmotivedb
+    ports:
+      - 80:5000
+
+ 

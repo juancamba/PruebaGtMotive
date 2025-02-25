@@ -1,0 +1,6 @@
+@PruebaGtMotive.Api_HostAddress = http://localhost:5118
+
+GET {{PruebaGtMotive.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

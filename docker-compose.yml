@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  pruebagtmotivedb:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+
+  pruebagtmotiveapi:
+    image: ${DOCKER_REGISTRY-}pruebagtmotiveapi
+    build:
+      context: .
+      dockerfile: src/PruebaGtMotive/PruebaGtMotive.Api/Dockerfile
