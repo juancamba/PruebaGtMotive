@@ -58,5 +58,5 @@ Ir al metodo correspondiente EntregarVehiculo el cual pedirá el userid y el veh
 * Uso de Result pattern
 * Uso de Unit of work
 * Los eventos de dominio se alamcenan en una lista en  memoria, esto es facilmente escalable por ejemplo a un outbox pattern, mediante el cual podemos ir almacenando esos eventos en una tabla de bd por ejemplo o pasarlos por mensajería
-* En el domino se ven los roles. La idea de esto es generar roles para los uusarios
+* En el domino se ven los roles. La idea de esto es generar roles para los usuarios. No está implementado
 * No se implementó autenticación, pero es facilmente implementable y además se puede conjuntar con los roles descritos en el paso anterior para poder denegar el acceso en base a estos a diferentes endpoints.
