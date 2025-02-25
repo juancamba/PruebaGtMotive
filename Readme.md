@@ -17,7 +17,7 @@ Ejecutar la aplicación con el siguiente comando. Esto levantará un conenedor c
 docker compose -f docker-compose.yml -f docker-compose.override.yml up -d
 ```
 
-#Entornos
+# Entornos
 
 ## development 
 ejecuta la api en local, contra el mssql en docker
@@ -27,22 +27,25 @@ ejecuta api en docker contra mssql en docker, para debuggear desde vscode pero n
 
 
 ## ejecutar test
+
 ```
 dotnet test test/PruebaGtMotive/PruebaGtMotive.Api.FunctionalTests/
 dotnet test test/PruebaGtMotive/PruebaGtMotive.Application.UnitTests/
 dotnet test test/PruebaGtMotive/PruebaGtMotive.Domain.UnitTests/
 dotnet test test/PruebaGtMotive/PruebaGtMotive.Application.IntegrationTests/
-dotnet test PruebaGtMotive.Architecture.UnitTests/ # no implementado, la idea es que no se rompan las reglas del DDD
+# no implementado, la idea es que no se rompan las reglas del DDD
+dotnet test PruebaGtMotive.Architecture.UnitTests/ 
 
 ```
+# Casos de uso
 
-## crear alqulier
+## crear alquiler
 1 obtener datos del usuario listando en el metedo GetUsers
 2 listar datos de vehiculo disponibles GetVehiculosDisponibles
 3 hacer la petición desde el metodo CreateAlquiler
 
 ## Entregar vehiculo
-Ir al metodo correspondiente el cual pedirá el userid y el vehiculoid
+Ir al metodo correspondiente EntregarVehiculo el cual pedirá el userid y el vehiculoid. Para obtener los id se explica en el párrafo anterior.
 
 
 
